@@ -1,3 +1,7 @@
 holaa master x2
 la conche de lka lira
+<<<<<<< HEAD
 quetal
+=======
+la cola
+>>>>>>> rama2
