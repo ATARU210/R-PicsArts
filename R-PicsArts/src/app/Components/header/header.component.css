@@ -1,0 +1,106 @@
+header{
+    background-color: aqua;
+}
+.header{
+    background-color: rgb(6, 7, 13);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 8px 0px;
+    box-sizing: border-box;
+    color: rgb(242, 242, 242);
+    display: flex;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 54px;
+    left: 0px;
+    line-height: normal;
+    position: fixed;
+    right: 0px;
+    text-decoration-color: rgb(242, 242, 242);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    top: 0px;
+    vertical-align: baseline;
+    width: 100%;
+    z-index: 20;
+    -webkit-font-smoothing: antialiased scroll;
+}
+.principal-menu{
+    background-color: rgb(6, 7, 13);
+    width: 56px;
+    margin: 0px 0px 0px 8px;
+    padding: 0px 10px;
+    border: none;
+}
+.menu-icon svg{
+    width: 100%;
+    height: 50%;
+    fill: white;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 145px;
+    height: 55px;
+}
+.logo-box{
+    display: flex;
+    width: 100px;
+    height: 26px;
+    margin: 0px 28px 0px 10px;
+}
+.logo-icon svg{
+    height: 100%;
+}
+.logo-text svg{
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+.line-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.line{
+    height: 26px;
+
+    border-left:1px solid rgba(255, 255, 255, 0.315);
+}
+.bell-box{
+    width: 55px;
+    height: 100%;
+}
+.bell-line{
+    width: 25px;
+    height: 100%;
+    margin: 0px 15px;
+}
+.bell svg{
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+.box-search{
+    display: flex;
+    width: 200px;
+    height: 100%;
+    align-items: center;
+}
+.search{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.199);
+    border-radius: .3rem;
+
+}
+.no-theme-skin.user-menu{
+    display: none;
+}
