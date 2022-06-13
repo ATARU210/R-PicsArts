@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "PicsArts",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -97,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "09b28db7-2cf1-44ad-b94e-073eb8025ac1"
   }
 }
