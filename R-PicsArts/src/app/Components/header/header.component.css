@@ -1,6 +1,3 @@
-header{
-    background-color: aqua;
-}
 .header{
     background-color: rgb(6, 7, 13);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 8px 0px;
@@ -28,23 +25,8 @@ header{
     top: 0px;
     vertical-align: baseline;
     width: 100%;
-    z-index: 20;
+    z-index: 80;
     -webkit-font-smoothing: antialiased scroll;
-}
-.principal-menu{
-    background-color: rgb(6, 7, 13);
-    width: 56px;
-    margin: 0px 0px 0px 8px;
-    padding: 0px 10px;
-    border: none;
-}
-.menu-icon svg{
-    width: 100%;
-    height: 50%;
-    fill: white;
-}
-.menu-icon svg:hover{
-    fill: rgb(81, 202, 146);
 }
 .logo{
     display: flex;
