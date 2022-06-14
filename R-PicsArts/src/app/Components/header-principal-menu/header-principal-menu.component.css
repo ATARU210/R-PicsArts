@@ -1,0 +1,83 @@
+.principal-menu{
+    background-color: transparent;
+    height: 100%;
+    width: 54px;
+    margin: 0px 10px;
+    border: none;
+}
+.menu-icon svg{
+    width: 50px;
+    height: 25px;
+    fill: white;
+    cursor: pointer;
+}
+.menu-icon svg:hover{
+    fill: rgb(81, 202, 146);
+}
+.left-bar{
+    position: fixed;
+    top: 54px;
+    left: 0px;
+    z-index: 200;
+    height: 100vh;
+    width: 74px;
+    border-right: 1px solid #3a3d3f;
+    background-color: rgb(6, 7, 13);
+    overflow: hidden;
+    transition: .5s;
+}
+.left-bar.active{
+    width: 212px;
+    transition: .5s;
+}
+.background-left-bar{
+    position: fixed;
+    top: 54px;
+    left: 0px;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    transition: .5s;
+}
+.background-left-bar.active{
+    background-color: rgba(0, 0, 0, 0.377);
+    transition: .5s;
+}
+.option{
+    display: flex;
+    width: 212px;
+    padding: 10px 10px;
+    align-items: center;
+}
+.option.active{
+    background-color: rgba(83, 89, 116, 0.527);
+}
+.option svg{
+    height: 25px;
+    width: 60px;
+    margin-right: 10px;
+    fill: white;
+}
+.option.active svg{
+    fill: rgb(81, 202, 146);
+}
+.option:hover{
+    background-color: rgba(83, 89, 116, 0.363);
+}
+.recommended{
+    height: 45px;
+    border-top: 1px solid #3a3d3f;
+    border-bottom: 1px solid #3a3d3f;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.recommended.active{
+    height: 135px;
+    transition: 0.5s;
+}
+.option-title{
+    width: 132px;
+    margin-left: 10px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.568);
+}
