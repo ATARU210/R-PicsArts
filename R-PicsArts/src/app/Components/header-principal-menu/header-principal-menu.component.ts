@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NumberValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'PicsArts-header-principal-menu',
@@ -23,8 +24,13 @@ export class HeaderPrincipalMenuComponent implements OnInit {
     const recommended = document.getElementsByClassName('recommended');
     recommended[0].getAttribute("class")==="recommended"?recommended[0].setAttribute("class","recommended active"):recommended[0].setAttribute("class","recommended");
   }
-  clickOption(){
+  clickOption(array:number){
     const option=document.getElementsByClassName("option");
-    option[0].getAttribute("class")==="option"?option[0].setAttribute("class","option active"):option[0].setAttribute("class","option");
+    for(let i=0;i<option.length;i++){
+      if(i!==array){
+        option[i].setAttribute("class","option");
+      }
+    }
+    option[array].getAttribute("class")==="option"?option[array].setAttribute("class","option active"):option[array].setAttribute("class","option");
   }
 }
