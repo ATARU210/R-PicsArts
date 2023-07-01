@@ -35,13 +35,13 @@
     top: 54px;
     left: 0px;
     background-color: transparent;
-    width: 100vw;
-    height: 100vh;
-    transition: .5s;
+    width: 0px;
+    height: 100%;
+    transition: background-color .5s;
 }
 .background-left-bar.active{
     background-color: rgba(0, 0, 0, 0.377);
-    transition: .5s;
+    width: 100%;
 }
 .option{
     display: flex;
