@@ -1,0 +1,40 @@
+.pics-box{
+    width: 100%;
+    padding: 120px 0 0 75px;
+}
+
+.title-home{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 55px;
+    left: 75px;
+    background-color: rgba(40, 40, 41, 0.504);
+    width: 100%;
+    height: 75px;
+    padding: 0px 50px;
+}
+.title-home h1{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.pics-grid{
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: content;
+    gap: 0px 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+.pics-grid div img{
+    width: 100%;
+    height: auto;
+}
+
+.pics-grid div{
+    display: inline-block;
+    height: fit-content;
+    width: auto;
+}

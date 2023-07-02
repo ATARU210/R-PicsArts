@@ -1,0 +1,10 @@
+<main class="pics-box">
+    <div class="title-home">
+        <h1>Home</h1>
+    </div>
+    <section *ngIf="getterImages()" class="pics-grid" >
+        <div *ngFor="let image of getterImages().data.photos">
+            <img  [src]="image.src.medium" [alt]="image.url">
+        </div>
+    </section>
+</main>

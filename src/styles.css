@@ -4,13 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+  width: 100%;
+  min-width: fit-content;
+}
 body{
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     width: 100%;
     line-height: 35px;
-    background-color: rgb(7, 44, 255);
+    background-color: rgb(6, 7, 13);
 }
 .title{
   font-family: 'Satisfy', cursive;
