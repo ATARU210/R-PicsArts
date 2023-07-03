@@ -1,63 +1,61 @@
 .footer{
-  position: fixed;
+  position: relative;
+  width: 100%;
   bottom: 0;
   background-color: #161a1f;
   background-image: url(https://st.deviantart.net/eclipse/global/sitefooter/bg_dark.png);
   display: block;
-  padding: 110px 0 35px;
   box-sizing: border-box;
   background-size: cover;
-  background-position: 0 0,right 0;
-  height: 433px;
-  content-visibility: auto;
-  contain-intrinsic-size: 1024px 320px;
+  height: 350px;
   font-family: sans-serif;
-  margin: 0;
-  vertical-align: baseline;
   text-decoration: none;
   color: inherit;
 }
 
 .footerContent{
 display: flex;
-flex-direction: row;
+height: 100%;
 justify-content: center;
+align-items: center;
 font-size: 16px;
 }
 
-.icon-art{
+.logo{
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  opacity: .95;
-  color: inherit;
+  align-items: center;
+  width: 145px;
+  height: 55px;
 }
-
-.link-page{
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
-  font-variant-caps:inherit;
+.logo-box{
+  display: flex;
+  width: 100px;
+  height: 26px;
+  margin: 0px 28px 0px 10px;
+}
+.logo-icon svg{
+  height: 100%;
+}
+.logo-text svg{
+  width: 100%;
+  height: 100%;
+  fill: white;
 }
 
 
 .adicional-content{
   display: grid;
-  grid-template-rows: repeat(4,1fr);
-  grid-column-gap: 90px;
-  grid-row-gap: 22px;
-  grid-auto-flow: column;
-  margin: 0 90px 154px 140px;
+  grid-template-columns: 150px 150px 150px;
+  grid-column-gap: 40px;
+  grid-row-gap: 15px;
 }
 
-.social-networks{
-  display: flex;
-  color:inherit;
-  flex-direction: column;
-  justify-content: space-between;
+.adicional-content a{
+  display: inline-block;
+  font-weight:600;
+  text-align: left;
+  font-size: 14px;
 }
+
 
 

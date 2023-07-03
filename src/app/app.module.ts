@@ -3,17 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { LeftBarComponent } from './Components/left-bar/left-bar.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HeaderPrincipalMenuComponent } from './Components/header-principal-menu/header-principal-menu.component';
+import { PicsGridComponent } from './Components/pics-grid/pics-grid.component';
+import { PicsComponent } from './Components/pics/pics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LeftBarComponent,
     FooterComponent,
-    HeaderPrincipalMenuComponent
+    HeaderPrincipalMenuComponent,
+    PicsGridComponent,
+    PicsComponent
   ],
   imports: [
     BrowserModule

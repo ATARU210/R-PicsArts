@@ -1,0 +1,24 @@
+<main class="pics-box">
+    <div class="title-home">
+        <h1>Home</h1>
+    </div>
+    <section *ngIf="!getterLoading();else skeleton" id="pics-grid" >
+        <div class="img-box" *ngFor="let image of getterImages().data.photos" #image>
+            <img  [src]="image.src.landscape" [alt]="image.alt">
+            <div class="hover-img">
+                <a [href]="image.photographer_url">{{image.photographer}}</a>
+                <a [href]="image.url">Original</a>
+            </div>
+        </div>
+    </section>
+    <ng-template #skeleton>
+        <section id="pics-grid" >
+            <div class="skeleton" *ngFor="let i of [1,2,3,4,5,6]">
+            </div>
+        </section>
+    </ng-template>
+    <nav class="gallery-nav" *ngIf="!getterLoading()">
+        <a href="#"><button *ngIf="getterPage() > 1" (click)="prevPage()">Prev</button></a>
+        <a href="#"><button (click)="nextPage()">Next</button></a>
+    </nav>
+</main>
