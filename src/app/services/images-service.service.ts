@@ -10,15 +10,12 @@ export class ImagesServiceService {
 
   constructor() { }
   private client = createClient(environment.apiKey);
-  private page = 2
-  options = {
-    per_page: 14,
-    page: this.page
-  }
 
-  async getImage(){
+  async getImage(page:number){
     try{
-      const result = (await this.client.photos.curated(this.options))
+      const result = (await this.client.photos.curated({
+        per_page: 14,
+        page: page}))
       const res = {
         status: 200,
         data: result

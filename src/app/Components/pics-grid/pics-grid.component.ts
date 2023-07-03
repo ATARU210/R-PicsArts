@@ -12,18 +12,39 @@ export class PicsGridComponent implements OnInit {
   constructor(private imageService:ImagesServiceService) {}
 
   private images:any
+  private page:number =1
+  private loading:boolean = false
 
   getterImages(){
     return this.images
   }
+  getterPage(){
+    return this.page
+  }
+  getterLoading(){
+    return this.loading
+  }
 
   async getImages() {
-    this.images = await this.imageService.getImage()
-    console.log(this.images)
+    this.loading = true
+    this.images = await this.imageService.getImage(this.page)
+    this.loading = false
+  }
+
+  nextPage(){
+    this.page+=1;
+    this.getImages()
+  }
+
+  prevPage(){
+    this.page-=1;
+    this.getImages()
   }
 
   ngOnInit(): void {
     this.getImages()
   }
+
+
 
 }
