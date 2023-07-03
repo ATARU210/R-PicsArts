@@ -29,4 +29,23 @@ export class ImagesServiceService {
       return error
     }
   }
+  async getImageSearch(page:number, query:string){
+    try{
+      const result = (await this.client.photos.search({
+        per_page: 14,
+        query: query,
+        page: page}))
+      const res = {
+        status: 200,
+        data: result
+      }
+      return res
+    }catch(err){
+      let error ={
+        status:400,
+        error: err
+      }
+      return error
+    }
+  }
 }
