@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ImagesServiceService } from 'src/app/services/images-service.service';
-import { Photos } from 'pexels/dist/types';
 
 @Component({
   selector: 'PicsArts-pics-grid',
@@ -14,6 +13,7 @@ export class PicsGridComponent implements OnInit {
   private images:any
   private page:number =1
   private loading:boolean = false
+  search:string= ""
 
   getterImages(){
     return this.images
@@ -28,6 +28,12 @@ export class PicsGridComponent implements OnInit {
   async getImages() {
     this.loading = true
     this.images = await this.imageService.getImage(this.page)
+    this.loading = false
+  }
+
+  async getImagesSearch(){
+    this.loading = true
+    this.images = await this.imageService.getImageSearch(this.page,this.search)
     this.loading = false
   }
 
