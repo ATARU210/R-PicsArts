@@ -7,6 +7,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HeaderPrincipalMenuComponent } from './Components/header-principal-menu/header-principal-menu.component';
 import { PicsGridComponent } from './Components/pics-grid/pics-grid.component';
 import { PicsComponent } from './Components/pics/pics.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PicsComponent } from './Components/pics/pics.component';
     PicsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

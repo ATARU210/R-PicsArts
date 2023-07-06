@@ -1,3 +1,6 @@
-<PicsArts-header></PicsArts-header>
-<PicsArts-pics-grid></PicsArts-pics-grid>
+<PicsArts-header
+[search]="getterSearch()"
+(newSearch)="setterSearch($event)"></PicsArts-header>
+<PicsArts-pics-grid 
+[search]="getterSearch()"></PicsArts-pics-grid>
 <PicsArts-footer></PicsArts-footer>

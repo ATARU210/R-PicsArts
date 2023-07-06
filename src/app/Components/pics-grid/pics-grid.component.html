@@ -1,8 +1,8 @@
-<main class="pics-box">
+<main class="pics-box" id="pics-box">
     <div class="title-home">
-        <h1>Home</h1>
+        <h1>{{search || "Home"}}</h1>
     </div>
-    <section *ngIf="!getterLoading();else skeleton" id="pics-grid" >
+    <section *ngIf="!getterLoading() && getterImages().status==200" class="pics-grid" >
         <div class="img-box" *ngFor="let image of getterImages().data.photos" #image>
             <img  [src]="image.src.landscape" [alt]="image.alt">
             <div class="hover-img">
@@ -11,14 +11,15 @@
             </div>
         </div>
     </section>
-    <ng-template #skeleton>
-        <section id="pics-grid" >
+        <section class="pics-grid" *ngIf="!getterImages() || (getterImages().status == 200 && getterLoading())">
             <div class="skeleton" *ngFor="let i of [1,2,3,4,5,6]">
             </div>
         </section>
-    </ng-template>
-    <nav class="gallery-nav" *ngIf="!getterLoading()">
-        <a href="#"><button *ngIf="getterPage() > 1" (click)="prevPage()">Prev</button></a>
-        <a href="#"><button (click)="nextPage()">Next</button></a>
+    <section class="error" *ngIf="getterImages() && getterImages().status == 400">
+        <H1>Ocurrio un error inesperado</H1>
+    </section>
+    <nav class="gallery-nav" *ngIf="!getterLoading() && getterImages().status==200">
+        <button *ngIf="getterImages().data.prev_page" (click)="prevPage()">Prev</button>
+        <button *ngIf="getterImages().data.next_page" (click)="nextPage()">Next</button>
     </nav>
 </main>

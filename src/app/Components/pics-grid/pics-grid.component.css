@@ -20,7 +20,7 @@
     font-weight: bolder;
 }
 
-#pics-grid{
+.pics-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -28,15 +28,15 @@
     padding: 20px;
 }
 
-#pics-grid .img-box img{
+.pics-grid .img-box img{
     width: 100%;
     height: 100%;
 }
-#pics-grid .img-box:hover{
+.pics-grid .img-box:hover{
     scale: 1.02;
 }
 
-#pics-grid .img-box{
+.pics-grid .img-box{
     background-color: rgb(44, 44, 44);
     position: relative;
     display: inline-block;
@@ -92,6 +92,12 @@
     animation: loading infinite 1s;
     width: 100%;
     height: 300px;
+}
+.error{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 400px;
 }
 
 @keyframes loading {
