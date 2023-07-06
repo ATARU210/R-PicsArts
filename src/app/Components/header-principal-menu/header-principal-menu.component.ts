@@ -33,17 +33,6 @@ export class HeaderPrincipalMenuComponent implements OnInit {
       }
     }
     option[array].getAttribute("class")==="option"?option[array].setAttribute("class","option active"):option[array].setAttribute("class","option");
-    if(array == 0)
-    this.newCategory.emit("Entretenimiento")
-    if(array == 1)
-    this.newCategory.emit("Cultura")
-    if(array == 2)
-    this.newCategory.emit("Comida")
-    if(array == 3)
-    this.newCategory.emit("Religion")
-    if(array == 4)
-    this.newCategory.emit("Dibujos")
-    if(array !== 0&&1&&2&&3&&4)
-    this.newCategory.emit("")
+    
   }
 }
