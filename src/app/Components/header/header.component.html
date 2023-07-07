@@ -1,5 +1,7 @@
 <header class="header">
-    <PicsArts-header-principal-menu></PicsArts-header-principal-menu>
+    <PicsArts-header-principal-menu
+    [category]="getterCategory()"
+    (newCategory)="setterCategory($event)"></PicsArts-header-principal-menu>
     <a href=""class="logo">
         <div class="logo-box">
             <span class="logo-icon">
@@ -66,11 +68,11 @@
     </a>
     <div class="line-box">
         <div class="box-search">
-            <form class="search">
-                <input type="text" class="search-input" id="search-input"
-                    placeholder="Search &amp; Discover" value="">
+            <div class="search">
+                <input type="text" class="search-input" id="search"
+                    placeholder="Search &amp; Discover" [(ngModel)]="search">
                 <span class="box-send-input">
-                    <button class="send-input" >
+                    <button class="send-input" type="button" (click)="setterSearch()">
                         <span class="icon-send-input">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path
@@ -80,7 +82,7 @@
                         </span>
                     </button>
                 </span>
-            </form>
+            </div>
         </div>
         <div class="chats-box">
             <div class="points-box">
@@ -112,7 +114,7 @@
             </div>
         </div>
         <div class="user-menu-box">
-            <a href="#">
+            <a href="">
                 <div class="user-menu" style="width:30px;height:30px">
                     <svg viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <title>

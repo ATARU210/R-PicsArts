@@ -88,6 +88,7 @@
     width: 40px;
     height: 100%;
     border: none;
+    cursor: pointer;
 }
 .icon-send-input{
     display: flex;

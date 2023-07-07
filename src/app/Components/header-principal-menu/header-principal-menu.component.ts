@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NumberValueAccessor } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,8 @@ import { NumberValueAccessor } from '@angular/forms';
   styleUrls: ['./header-principal-menu.component.css']
 })
 export class HeaderPrincipalMenuComponent implements OnInit {
-
+  @Input() category:string = ""
+  @Output() newCategory = new EventEmitter
   constructor() { }
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class HeaderPrincipalMenuComponent implements OnInit {
 
   openMenu(){
     const background = document.getElementsByClassName('background-left-bar');
-    const menu=document.getElementsByClassName("left-bar");
+    const menu = document.getElementsByClassName("left-bar");
     menu[0].getAttribute("class")==="left-bar"?menu[0].setAttribute("class","left-bar active"):menu[0].setAttribute("class","left-bar");
     background[0].getAttribute("class")==="background-left-bar"?background[0].setAttribute("class","background-left-bar active"):background[0].setAttribute("class","background-left-bar");
   }
@@ -32,5 +33,6 @@ export class HeaderPrincipalMenuComponent implements OnInit {
       }
     }
     option[array].getAttribute("class")==="option"?option[array].setAttribute("class","option active"):option[array].setAttribute("class","option");
+    
   }
 }
